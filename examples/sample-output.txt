@@ -1,0 +1,12 @@
+=== Compute Price Simulator ===
+
+Base Price: 1.00
+Supply: 1000
+Demand: 1450
+Utilization: 145.0%
+Hardware Shock Factor: 1.15
+Energy Cost Factor: 1.08
+
+Estimated Compute Price: 1.8
+Scarcity Level: High
+Market State: Tight Market
