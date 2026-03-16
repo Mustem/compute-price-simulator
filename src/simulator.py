@@ -1,8 +1,17 @@
+import sys
+
 base_price = 1.00
-supply = 1000
-demand = 1450
-hardware_shock_factor = 1.15
-energy_cost_factor = 1.08
+
+if len(sys.argv) == 5:
+    supply = float(sys.argv[1])
+    demand = float(sys.argv[2])
+    hardware_shock_factor = float(sys.argv[3])
+    energy_cost_factor = float(sys.argv[4])
+else:
+    supply = 1000
+    demand = 1450
+    hardware_shock_factor = 1.15
+    energy_cost_factor = 1.08
 
 utilization = demand / supply
 

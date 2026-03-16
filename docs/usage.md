@@ -1,12 +1,13 @@
 # Usage
 
-Run the simulator with:
+Run the simulator with default built-in values:
 
 python3 src/simulator.py
 
-This first version uses built-in sample values for:
-- base price
-- supply
-- demand
-- hardware shock factor
-- energy cost factor
+Run the simulator with custom values:
+
+python3 src/simulator.py <supply> <demand> <hardware_shock_factor> <energy_cost_factor>
+
+Example:
+
+python3 src/simulator.py 1000 1450 1.15 1.08
