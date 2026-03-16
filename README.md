@@ -17,6 +17,7 @@ This project is a small starting point: a CLI-based simulator for thinking about
 - outputs an estimated compute price
 - labels market scarcity
 - supports CLI-based scenario input
+- supports preset market scenarios
 
 ## Structure
 
@@ -35,6 +36,11 @@ Runs a simple compute market pricing simulation.
 Run with default values:
 python3 src/simulator.py
 
+Run with a preset:
+python3 src/simulator.py tight
+python3 src/simulator.py balanced
+python3 src/simulator.py loose
+
 Run with custom inputs:
 python3 src/simulator.py 1000 1450 1.15 1.08
 
@@ -46,7 +52,7 @@ Input order:
 
 ## Roadmap
 
-- add scenario presets
 - add CSV input support
 - add simple futures-oriented scenarios
 - add mean-reversion inspired pricing logic
+- add contract unit assumptions

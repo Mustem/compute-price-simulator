@@ -1,12 +1,13 @@
 === Compute Price Simulator ===
 
+Preset Scenario: tight
 Base Price: 1.00
 Supply: 1000
-Demand: 1450
-Utilization: 145.0%
-Hardware Shock Factor: 1.15
-Energy Cost Factor: 1.08
+Demand: 1600
+Utilization: 160.0%
+Hardware Shock Factor: 1.20
+Energy Cost Factor: 1.10
 
-Estimated Compute Price: 1.8
+Estimated Compute Price: 2.11
 Scarcity Level: High
 Market State: Tight Market
