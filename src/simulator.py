@@ -1,6 +1,7 @@
 import sys
 
 base_price = 1.00
+mean_reversion_strength = 0.30
 
 preset = sys.argv[1].lower() if len(sys.argv) >= 2 else None
 
@@ -31,8 +32,14 @@ else:
     energy_cost_factor = 1.08
 
 utilization = demand / supply
-price_multiplier = utilization * hardware_shock_factor * energy_cost_factor
-estimated_price = round(base_price * price_multiplier, 2)
+raw_price_multiplier = utilization * hardware_shock_factor * energy_cost_factor
+raw_estimated_price = base_price * raw_price_multiplier
+
+mean_reverted_price = raw_estimated_price - (
+    (raw_estimated_price - base_price) * mean_reversion_strength
+)
+
+estimated_price = round(mean_reverted_price, 2)
 
 if utilization < 0.70:
     scarcity = "Low"
@@ -56,7 +63,9 @@ print(f"Demand: {demand}")
 print(f"Utilization: {utilization * 100:.1f}%")
 print(f"Hardware Shock Factor: {hardware_shock_factor:.2f}")
 print(f"Energy Cost Factor: {energy_cost_factor:.2f}")
+print(f"Mean Reversion Strength: {mean_reversion_strength:.2f}")
 print()
-print(f"Estimated Compute Price: {estimated_price:.2f}")
+print(f"Raw Estimated Price: {raw_estimated_price:.2f}")
+print(f"Mean-Reverted Price: {estimated_price:.2f}")
 print(f"Scarcity Level: {scarcity}")
 print(f"Market State: {market_state}")

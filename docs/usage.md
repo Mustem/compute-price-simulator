@@ -17,3 +17,5 @@ python3 src/simulator.py <supply> <demand> <hardware_shock_factor> <energy_cost_
 Example:
 
 python3 src/simulator.py 1000 1450 1.15 1.08
+
+This version also applies a simple mean-reversion inspired adjustment to the raw estimated price.

@@ -7,7 +7,9 @@ Demand: 1600
 Utilization: 160.0%
 Hardware Shock Factor: 1.20
 Energy Cost Factor: 1.10
+Mean Reversion Strength: 0.30
 
-Estimated Compute Price: 2.11
+Raw Estimated Price: 2.11
+Mean-Reverted Price: 1.77
 Scarcity Level: High
 Market State: Tight Market

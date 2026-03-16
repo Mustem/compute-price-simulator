@@ -18,6 +18,7 @@ This project is a small starting point: a CLI-based simulator for thinking about
 - labels market scarcity
 - supports CLI-based scenario input
 - supports preset market scenarios
+- includes mean-reversion inspired pricing logic
 
 ## Structure
 
@@ -54,5 +55,5 @@ Input order:
 
 - add CSV input support
 - add simple futures-oriented scenarios
-- add mean-reversion inspired pricing logic
 - add contract unit assumptions
+- add oracle-inspired external input structure
