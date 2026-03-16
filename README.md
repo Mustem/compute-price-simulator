@@ -1,6 +1,6 @@
 # compute-price-simulator
 
-A simple Python prototype for modeling compute price pressure using supply, demand, utilization, hardware shocks, and energy cost factors.
+A simple Python prototype for modeling compute price pressure using supply, demand, utilization, hardware shocks, energy cost factors, and oracle-inspired provider inputs.
 
 ## Why this exists
 
@@ -19,6 +19,7 @@ This project is a small starting point: a CLI-based simulator for thinking about
 - supports CLI-based scenario input
 - supports preset market scenarios
 - includes mean-reversion inspired pricing logic
+- includes oracle-inspired provider price inputs
 
 ## Structure
 
@@ -56,4 +57,4 @@ Input order:
 - add CSV input support
 - add simple futures-oriented scenarios
 - add contract unit assumptions
-- add oracle-inspired external input structure
+- add external provider data ingestion

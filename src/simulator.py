@@ -3,6 +3,14 @@ import sys
 base_price = 1.00
 mean_reversion_strength = 0.30
 
+provider_prices = {
+    "AWS": 1.32,
+    "RunPod": 1.08,
+    "Vast.ai": 0.94,
+    "Akash": 0.89,
+    "Republic": 1.02,
+}
+
 preset = sys.argv[1].lower() if len(sys.argv) >= 2 else None
 
 if preset == "tight":
@@ -41,6 +49,10 @@ mean_reverted_price = raw_estimated_price - (
 
 estimated_price = round(mean_reverted_price, 2)
 
+provider_values = list(provider_prices.values())
+reference_market_price = round(sum(provider_values) / len(provider_values), 2)
+provider_price_spread = round(max(provider_values) - min(provider_values), 2)
+
 if utilization < 0.70:
     scarcity = "Low"
     market_state = "Loose Market"
@@ -65,6 +77,16 @@ print(f"Hardware Shock Factor: {hardware_shock_factor:.2f}")
 print(f"Energy Cost Factor: {energy_cost_factor:.2f}")
 print(f"Mean Reversion Strength: {mean_reversion_strength:.2f}")
 print()
+
+print("Provider Inputs:")
+for provider, price in provider_prices.items():
+    print(f"- {provider}: {price:.2f}")
+
+print()
+print(f"Reference Market Price: {reference_market_price:.2f}")
+print(f"Provider Price Spread: {provider_price_spread:.2f}")
+print()
+
 print(f"Raw Estimated Price: {raw_estimated_price:.2f}")
 print(f"Mean-Reverted Price: {estimated_price:.2f}")
 print(f"Scarcity Level: {scarcity}")

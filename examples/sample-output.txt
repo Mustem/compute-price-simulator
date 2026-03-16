@@ -9,6 +9,16 @@ Hardware Shock Factor: 1.20
 Energy Cost Factor: 1.10
 Mean Reversion Strength: 0.30
 
+Provider Inputs:
+- AWS: 1.32
+- RunPod: 1.08
+- Vast.ai: 0.94
+- Akash: 0.89
+- Republic: 1.02
+
+Reference Market Price: 1.05
+Provider Price Spread: 0.43
+
 Raw Estimated Price: 2.11
 Mean-Reverted Price: 1.77
 Scarcity Level: High

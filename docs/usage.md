@@ -18,4 +18,6 @@ Example:
 
 python3 src/simulator.py 1000 1450 1.15 1.08
 
-This version also applies a simple mean-reversion inspired adjustment to the raw estimated price.
+This version also includes:
+- a mean-reversion inspired price adjustment
+- an oracle-inspired provider price input structure
